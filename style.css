@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.1);
+  transition: all 300ms ease;
+}
+
+li {
+    list-style-type: none;
+    text-decoration: none;
+  }
+  
+.container {
+    padding: 72px 0;
+  }
+  
+.row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.525), rgba(0, 0, 0, 0.725)), url(./assets/movieposter.jpeg);
+} 
+
+/* NAV */
+
+nav {
+    height: 80px;
+    display: flex;
+}
+
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 24px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+  
+.nav__links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__link {
+    margin-left: 16px;
+    padding: 8px;
+}
+
+.nav__link:hover {
+    text-decoration: underline;
+}
+
+.nav__link:last-child {
+    padding: 0;
+}
+
+.nav__link--anchor {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.nav__link--anchor-primary {
+    background-color: #FFFF66;
+    padding: 8px 20px;
+    border-radius: 50px;
+    color: #242424;
+}
+
+.nav__link--anchor-primary:hover {
+    background-color: #242424;
+    color: white;
+    cursor: no-drop;
+}
+
+.logo {
+    width: 90px;
+    height: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    filter: grayscale(1) invert(1);
+}
+
+.yellow {
+    color: #FFFF66;
+}
+
+
+/* HEADER */
+
+.header__input {
+    width: 400px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    outline: transparent;
+}
+
+.header__input input {
+    width: 100%;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 50px;
+    padding: 0 16px;
+    box-shadow: rgba(0, 0, 0, 0.55) 0px 18px 40px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    outline: none;
+}
+
+.header__input button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 8px;
+    padding: 16px 0;
+}
+
+.btn {
+    border: none;
+    background-color: transparent;
+    color: black;
+}
+
+.header__img {
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+    transform: scale(1.1);
+}
+
+.search {
+   text-align: center;
+}
+
+.search__title {
+    margin-bottom: 16px;
+    color: white;
+}
+
+.no__results {
+    text-align: center;
+    color: white;
+    display: none;
+}
+
+.no__results.active {
+    display: block;
+} 
+
+
+#movies__section {
+    background-color: #242424;
+    min-height: 100vh;
+}
+
+.movies__loading {
+    font-size: 60px;
+    color: white;
+    padding-top: 40px;
+}
+
+.movies__loading--spinner {
+    display: none !important; 
+}
+
+.movies__loading .movies__loading--spinner {
+    display: block !important;
+}
+
+.fa-spinner {
+    animation: rotate 600ms infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.search__filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.search__result {
+    color: white;
+}
+
+.movie__result {
+    color: yellow;
+}
+
+.movies {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie-list {
+    margin: 24px;
+    /* box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden; */
+    width: calc(100% / 3);
+    width: 255px;
+    height: 448px;
+}
+
+.movie__img--wrapper {
+    width: 100%;
+    height: 80%;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: no-drop;
+}
+
+.movie__img--wrapper:hover img {
+    transform: scale(1.15);
+}
+
+.movie__description { 
+    color: white;
+    margin-top: 4px;
+}
+
+.movie__year {
+    margin-bottom: 8px;
+}
+
+.imdb {
+    background-color: yellow;
+    font-size: 16px;
+    padding: 0 12px;
+    color: #242424;
+    text-decoration: none;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    max-width: 70px;
+}
+
+.movie__title,
+.movie__year {
+    font-size: 14px;
+}

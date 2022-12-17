@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon" />
+    <script src="./app.js" defer></script>
+    <script src="https://kit.fontawesome.com/bcf4e3b081.js" crossorigin="anonymous"></script>
+    <title>Movie Finds</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav__container">
+            <img src="assets/logo.svg" class="logo" alt="">
+          <ul class="nav__links">
+            <li class="nav__link">
+              <a href="./index.html" class="
+                    nav__link--anchor
+                    ">Home</a>
+            </li>
+            <li class="nav__link">
+              <a href="./index.html" class="
+                    nav__link--anchor 
+                    ">Search movies</a>
+            </li>
+            <li class="nav__link">
+              <a href="#" class="
+                    nav__link--anchor 
+                    nav__link--anchor-primary
+                    ">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="row">
+          <div class="search">
+            <h1 class="search__title">
+              Browse <span class="yellow">movies</span> here.
+            </h1>
+            <div class="header__input">
+              <input type="text" class="input__field" placeholder="Movie Name" onchange="onSearchInputChange(event)">
+              <button class="btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="movies__section">
+        <div class="container">
+          <div class="row">
+            <div class="search__filter">
+              <h2 class="search__result">
+                Search results for: <span class="movie__result"></span>
+              </h2>
+            </div>
+            <div class="movies">
+              <i class="fas fa-spinner movies__loading--spinner"></i>
+              <!-- <div class="movie-list">
+                <figure class="movie__img--wrapper">
+                  <img src="./assets/detective-pikachu.jpeg" class="movie__img" alt="">
+                </figure>
+                <div class="movie__description">
+                  <h3 class="movie__title">Movie</h3>
+                  <h4 class="movie__year">2008</h4>
+                  <a href="" class="imdb" target="_blank">IMDB</a>
+                </div>
+              </div> -->
+            </div>
+            <h2 class="no__results">
+              No results found. 
+            </h2>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
